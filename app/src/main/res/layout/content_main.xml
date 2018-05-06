@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:orientation="horizontal"
+    android:id="@+id/main_layout"
+
+    >
+
+    <TextView
+        android:id="@+id/red_text_View"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="23dp"
+        android:text="@string/red"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="7dp" />
+
+
+    <TextView
+        android:id="@+id/green_Text_View"
+        android:layout_width="49dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/green_Seek_Bar"
+        android:text="@string/green"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <TextView
+        android:id="@+id/blue_Text_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Blue_Edit_Text"
+        android:layout_alignParentStart="true"
+        android:maxLength="3"
+        android:text="@string/blue"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="7dp" />
+
+    <EditText
+        android:id="@+id/Red_Edit_Text"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/red_text_View"
+        android:layout_toEndOf="@+id/green_Text_View"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/_0"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:maxLength="3"/>
+
+    <EditText
+        android:id="@+id/green_Edit_Text"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/green_Text_View"
+        android:layout_toEndOf="@+id/green_Text_View"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:ems="10"
+        android:inputType="number"
+        android:maxEms="255"
+        android:text="@string/_0"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="15sp"
+        android:maxLength="3"/>
+    <EditText
+        android:id="@+id/Blue_Edit_Text"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="103dp"
+        android:layout_toEndOf="@+id/green_Text_View"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:ems="10"
+        android:inputType="number"
+        android:maxEms="255"
+        android:text="@string/_0"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp"
+        android:maxLength="3"/>
+
+    <SeekBar
+        android:id="@+id/red_Seek_Bar"
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/red_text_View"
+        android:layout_marginEnd="11dp"
+
+        android:max="255"
+        android:thumbTint="@android:color/holo_red_dark"
+        app:layout_constraintLeft_toRightOf="@id/Red_Edit_Text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <SeekBar
+        android:id="@+id/green_Seek_Bar"
+        android:layout_width="255dp"
+        android:layout_height="28dp"
+        android:layout_above="@+id/Blue_Edit_Text"
+        android:layout_alignStart="@+id/red_Seek_Bar"
+        android:layout_marginBottom="-103dp"
+        android:max="255"
+        android:thumbTint="@android:color/holo_green_dark"
+        app:layout_constraintLeft_toRightOf="@id/green_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@id/red_Seek_Bar" />
+
+    <SeekBar
+        android:id="@+id/Blue_Seek_Bar"
+        android:layout_width="255dp"
+        android:layout_height="24dp"
+        android:layout_alignBottom="@+id/Blue_Edit_Text"
+        android:layout_alignStart="@+id/red_Seek_Bar"
+        android:max="255"
+        android:thumbTint="@android:color/holo_blue_dark"
+        app:layout_constraintLeft_toRightOf="@id/Blue_Edit_Text"
+        app:layout_constraintTop_toBottomOf="@id/green_Seek_Bar" />
+
+
+    <CheckBox
+        android:id="@+id/ums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="173dp"
+        android:text="@string/use_motion_sensors"
+        tools:ignore="InvalidId"
+        tools:layout_editor_absoluteX="5dp" />
+
+    <TextView
+        android:id="@+id/color_Preview_Text_View"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ums"
+        android:layout_marginEnd="34dp"
+        android:background="@android:color/black"
+        android:text="@string/color_preview"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="258dp" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGruppe"
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/btnn"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="2dp">
+
+        <RadioButton
+            android:id="@+id/bgcol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:checked="true"
+            android:onClick="check"
+            android:text="@string/background_color" />
+
+        <RadioButton
+            android:id="@+id/text_Color_RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:onClick="check"
+            android:text="@string/text_color" />
+
+        <RadioButton
+            android:id="@+id/button_Color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:onClick="check"
+            android:text="@string/button_color" />
+
+        <RadioButton
+            android:id="@+id/fabcol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:onClick="check"
+            android:text="@string/floating_action_button_color" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/red_Seek_Bar"
+        android:layout_marginBottom="31dp"
+        android:text="@string/set_color"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        android:onClick="check"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Exercise01</string>
+        <string name="action_settings">About...</string>
+        <string name="radiobutton">RadioButton</string>
+        <string name="background_color">Background Color</string>
+        <string name="_0">0</string>
+        <string name="red">Red</string>
+        <string name="color_preview">Color Preview</string>
+        <string name="use_motion_sensors">Use Motion Sensors</string>
+        <string name="text_color">Text Color</string>
+        <string name="floating_action_button_color">Floating Action Button Color</string>
+        <string name="button_color">Button Color</string>
+        <string name="green">Green</string>
+        <string name="blue">Blue</string>
+    <string name="set_color">set color</string>
+    <string name="the_selected_color_value">The Selected color value</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+</resources>
+
