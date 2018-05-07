@@ -32,7 +32,8 @@ public class About_layout extends Activity {
         BUT=(Button)findViewById(R.id.cancel);
         OBUT=(Button)findViewById(R.id.ok);
 
-       // TXV.setTextColor(getIntent().getExtras().getString("color"));
+        String colorDataText = getIntent().getExtras().getString("color");
+        TXV.setText("The selected calor value is (R,G,B)=" +colorDataText+".");
 
         /*
         TXV.setBackgroundColor(R.id.color_Preview_Text_View);

@@ -327,7 +327,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
                 {
                     Intent intent=new Intent(MainActivity.this, About_layout.class);
-                   // intent.putExtra("color",CLR.getTextColors().toString());
+                    String colorDataText = String.format("(%02X,%02X,%02X)",seekBar1.getProgress(), seekBar2.getProgress(),seekBar3.getProgress());
+                    intent.putExtra("color",colorDataText);
                     startActivity(intent);
                 }
 

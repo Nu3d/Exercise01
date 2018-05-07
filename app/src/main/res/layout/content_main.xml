@@ -215,7 +215,6 @@
         android:text="@string/set_color"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radioGroup"
         android:onClick="check"/>
 
 
